@@ -253,6 +253,7 @@ public class MetaInfo {
 			this.upperCtrlLimit=ctrl.getUpperCtrlLimit().doubleValue();
 			this.lowerAlarmLimit=ctrl.getLowerAlarmLimit().doubleValue();
 			this.upperAlarmLimit=ctrl.getUpperAlarmLimit().doubleValue();
+
 			this.precision=0;
 			this.unit=ctrl.getUnits();
 			updateTypeInfo(pvName, configService);
@@ -458,7 +459,7 @@ public class MetaInfo {
 		
 		long tempmax=Long.MAX_VALUE-100000;
 
-		if ((eventCount>tempmax)|(storageSize>tempmax)) {
+		if ((eventCount>tempmax)||(storageSize>tempmax)) {
 			eventCount=0;
 			storageSize=0;
 			startTime= System.currentTimeMillis();
