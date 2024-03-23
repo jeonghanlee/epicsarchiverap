@@ -1,8 +1,11 @@
 # WARNINGS
 
+* This repo is **NOT** the same as the community EPICS Archiver Appliances, so please be aware about the modification here, here is the link, https://github.com/archiver-appliance/epicsarchiverap.git , one can move out of this repository
+* 
 * Will cherry pick code changes only for the archiver appliance codes, **NOT** tests, styles, and so on
 * Will test it within a local environment accordingly
 * Will not Release and Tag within history
+* 
 
 
 # THOUGHTS
@@ -13,14 +16,13 @@ Migrating to the community's Gradle build system is challenging. Our resource co
 
 In addition, the current build system has significant drawbacks:
 
-    Requires a specific and recent version of Gradle.
-    Uses a mix of Gradle styles, making it difficult to understand and maintain.
-    Relies on the Gradle wrapper, which prevents standard Gradle build commands from using the system's default version of Gradle.
+- Requires a specific and recent version of Gradle.
+- Uses a mix of Gradle styles (Kotlin and Groovy), making it difficult to understand and maintain.
+- Relies on the Gradle wrapper, which prevents standard Gradle build commands from using the system's default version of Gradle. Debian 12 has the version 4.4.1.
 
-Given these factors and the wider adoption of Maven in EPICS Java applications, migrating to Maven may be a more strategic choice.
+Given these factors and the wider adoption of Maven in the Java applications with the EPICS comunity, migrating to Maven may be a more strategic choice.
 
-
-In my opinion, migrating to Tomcat 10 should be a higher priority than building the system.
+In my opinion, migrating to Tomcat 10 should be a higher priority than building the system itself. 
 
 
 # Cherry-picking, Merging, and manually selected files
